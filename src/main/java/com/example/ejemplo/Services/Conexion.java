@@ -7,8 +7,8 @@ import java.sql.SQLException;
 public class Conexion {
   public Connection openDb() {
     try {
-      Class.forName("org.mariadb.jdbc.Driver");
-      return DriverManager.getConnection("jdbc:mariadb://localhost:3306/chichemes","root","psII");
+      Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+      return DriverManager.getConnection("jdbc:sqlserver://localhost:1433;encrypt=true;trustServerCertificate=true;databaseName=chichemes","sa","Petronilo40");
     } catch (SQLException e) {
       int x = 1;
     } catch (ClassNotFoundException cnfex) {
